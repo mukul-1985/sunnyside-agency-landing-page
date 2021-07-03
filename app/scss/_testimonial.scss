@@ -1,0 +1,55 @@
+.testimonial {
+  // background-color: $white;
+  // width: 100%;
+
+  h3 {
+    color: $grayishBlue;
+    margin-top: 5em;
+    margin-bottom: 3em;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    word-spacing: .5rem;
+  }
+
+  @include breakpoint-down(small) {
+    h3 {
+      font-size: 1rem;
+    }
+  }
+
+  > div {
+    
+    > div {
+      width: 33%;
+      margin-bottom: 4em;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      
+      img {
+        width: 4em;
+        border-radius: 50%;
+      }
+
+      > p:first-of-type {
+        color: $darkGrayishBlue;
+        font-size: 1rem;
+        margin: 4em;
+        text-align: center;
+      }
+    }
+    
+    @include breakpoint-down(small) {
+      > div {
+        width: 100%;
+
+        > p:first-of-type {
+          margin: 2em;
+        }
+      }
+    }
+  }
+  
+}

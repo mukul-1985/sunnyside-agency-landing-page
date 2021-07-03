@@ -1,0 +1,61 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  font-family: 'Barlow', sans-serif;
+}
+
+.flex {
+  display: flex;
+
+  &__column {
+    flex-direction: column;
+  }
+
+  &__jc__sb {
+    justify-content: space-between;
+  }
+
+  &__jc__c {
+    justify-content: center;
+  }
+
+  &__ai__c {
+    align-items: center;
+  }
+
+  &__wrap {
+    flex-wrap: wrap;
+  }
+}
+
+.hide__for__mobile {
+  @include breakpoint-down(small) {
+    display: none;
+  }
+}
+
+.hide__for__desktop {
+  @include breakpoint-up(medium) {
+    display: none;
+  }
+}
+
+h1, h2, h3, h4 {
+  margin: 0;
+  padding: 0;
+  font-family: 'Fraunces', sans-serif;
+  font-weight: 900;
+  color: $veryDarkDesaturatedBlue;
+}
+
+p {
+  font-family: 'Barlow', sans-serif;
+  font-size: .8rem;
+  font-weight: 600;
+  color: $grayishBlue;
+}

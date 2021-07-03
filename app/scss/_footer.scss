@@ -1,0 +1,43 @@
+.footer {
+  > div > img {
+    width: 25%;
+  }
+
+  @include breakpoint-down(small) {
+    > div > img {
+      width: 50%;
+    }
+  }
+
+  &__banner {
+    min-height: 10em;
+    padding: 2em;
+    background-color: $footer;
+
+    h3 {
+      color: $graphicText;
+      text-align: center;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: center;
+
+    > a {
+      font-size: .8rem;
+      margin: 2em;
+      text-decoration: none;
+      color: $graphicText;
+    }
+  }
+
+  &__contact {
+    display: flex;
+    justify-content: center;
+
+    > img {
+      margin: 0 1em;
+    }
+  }
+}
